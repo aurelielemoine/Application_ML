@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Menuiserie Lemoine</string>
+    <string name="title_home">Accueil</string>
+    <string name="title_gallery">Galerie</string>
+    <string name="title_avis">Avis</string>
+    <string name="title_contact">Contact</string>
+    <string name="text_home_1">Présente en Ille-et-vilaine, l\'entreprise Menuiserie Lemoine vous propose une large sélection de services.</string>
+    <string name="text_home_2">MENUISERIE INTERIEURE</string>
+    <string name="text_home_3">MENUISERIE EXTERIEURE</string>
+    <string name="text_home_4">Nous pouvons vous conseiller et mettre notre savoir faire à votre service pour la réalisation de vos projets en menuiserie, notre équipe expérimentée saura tout mettre en oeuvre pour vous satisfaire. Que vous soyez un particulier ou un professionnel, et quelle que soit la taille de vos projets, nous mettons notre expérience à votre service pour vous apporter les meilleures prestations.</string>
+    <string name="title_atouts">ATOUTS</string>
+    <string name="title_assurances">ASSURANCES</string>
+    <string name="atout1">Etude et conseils personnalisés</string>
+    <string name="atout2">Fabrication française sur-mesure</string>
+    <string name="atout3">Certifié RGE Qualibat</string>
+    <string name="assurance1">Responsabilité civile</string>
+    <string name="assurance2">Garantie décennale</string>
+    <string name="text_avis">En tant qu\'artisants sérieux et honnêtes, la satisfaction de nos clients nous tient à coeur.</string>
+    <string name="textcontact">Vous souhaitez un devis pour une prestation de menuiserie neuf et rénovation? N\'hésitez pas à nous contacter ! Nous nous engageons à répondre à votre demande.</string>
+    <string name="text_appel">06 01 91 78 67</string>
+    <string name="text_mail">lemoine_eric@yahoo.fr</string>
+    <string name="text_contact">Eric Lemoine</string>
+    <string name="text_contact2">ERIC LEMOINE</string>
+    <string name="text_metier">Artisan Menuisier</string>
+    <string name="text_web">www.menuiserie-lemoine.bzh</string>
+    <string name="text_map">13 La Ville Auvé \n35190 Saint-Pern</string>
+
+    <string name="btn_appel">APPELER</string>
+    <string name="btn_mail">ECRIRE</string>
+    <string name="btn_contact">AJOUTER CONTACT</string>
+    <string name="btn_web">SITE WEB</string>
+    <string name="btn_map">MAP</string>
+
+    <string name="title_presta1">MENUISERIE INTÉRIEURE</string>
+    <string name="title_presta2">AMÉNAGEMENT INTÉRIEURE</string>
+    <string name="title_presta3">ISOLATION INTÉRIEURE</string>
+    <string name="title_presta4">MENUISERIE EXTÉRIEURE</string>
+    <string name="title_presta5">INSTALLATION DE PORTAIL ET PORTE DE GARAGE</string>
+
+    <string name="presta4">  • Pose de fenêtre, de baie vitrée et de porte d\'entrée \n • Installation de terrasse \n • Installation de balustrade, gardes corps \n • Création de carport en aluminium pour voiture ou terrasse \n • Installation de pergolas, carpot de terrasse ou abri voiture</string>
+    <string name="presta1">  • Fourniture d\'escalier en bois, ... \n • Fourniture de bloc porte \n • Création de portes d\'intérieur \n • Pose de parquet massif, contre collé, stratifié ou vinyl</string>
+    <string name="presta2">  • Installation de verrière sur mesure \n • Création de dressing, penderie, tiroirs, ...  \n • Réalisation de porte coulissante  \n • Réalisation d\'aménagement sous escalier, dans rampant.  \n • Réalisation d\'aménagement pour rangement et création de meuble sur mesure</string>
+    <string name="presta5">  • Installation de portail sur mesure \n • Installation de portail coulissant, battant \n • Automatisation de portail \n • Installation de porte de garage basculante \n • Pose de porte de garage battante \n • Automatisation de porte de garage \n • Mise en place de porte de garage sectionnelle et latérale, sur mesure</string>
+    <string name="presta3">  • Pose d\'installation d\'isolation thermique des planchers hauts \n • Pose d\'isolation thermique des murs par l\'intérieur \n • Pose de cloison placo plâtre, aménagement de pièce, aménagement de comble</string>
+
+
+</resources>
