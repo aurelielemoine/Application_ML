@@ -45,7 +45,6 @@ class GalleryFragment : Fragment() {
     fun CreerMesImages() :ArrayList<GalleryViewModel>
     {
         val images = ArrayList<GalleryViewModel>()
-        images.add(GalleryViewModel(R.drawable.eric_lemoine))
         images.add(GalleryViewModel(R.drawable.img1))
         images.add(GalleryViewModel(R.drawable.img2))
         images.add(GalleryViewModel(R.drawable.img3))
