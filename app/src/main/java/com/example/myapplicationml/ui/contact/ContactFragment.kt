@@ -37,13 +37,13 @@ class ContactFragment : Fragment(){
 
         binding.buttonContact.id = R.id.button_contact
         binding.buttonContact.setOnClickListener {
-            insertContact("Eric Lemoine", "lemoine_eric@yahoo.fr", "Menuiserie Lemoine", "0601917867")
+            insertContact("Eric Lemoine", "eric@menuiserie-lemoine.bzh", "Menuiserie Lemoine", "0601917867")
         }
 
         binding.buttonMail.id = R.id.button_mail
         val someStrings =
         binding.buttonMail.setOnClickListener {
-            composeEmail(Array<String>(1) { "lemoine_eric@yahoo.fr" }, "Contact via l'appli mobile")
+            composeEmail(Array<String>(1) { "eric@menuiserie-lemoine.bzh" }, "Contact via l'appli mobile")
         }
 
         binding.buttonWeb.id = R.id.button_web
