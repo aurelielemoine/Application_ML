@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/navigation_avis"
-        android:name="com.example.myapplicationml.ui.avis.AvisFragment"
+        android:name="com.example.myapplicationml.ui.avis.AvisFragment2"
         android:label="@string/title_avis"
-        tools:layout="@layout/fragment_avis" />
+        tools:layout="@layout/fragment_avis_2" />
     <fragment
         android:id="@+id/navigation_contact"
         android:name="com.example.myapplicationml.ui.contact.ContactFragment"

@@ -41,7 +41,6 @@ class ContactFragment : Fragment(){
         }
 
         binding.buttonMail.id = R.id.button_mail
-        val someStrings =
         binding.buttonMail.setOnClickListener {
             composeEmail(Array<String>(1) { "eric@menuiserie-lemoine.bzh" }, "Contact via l'appli mobile")
         }
