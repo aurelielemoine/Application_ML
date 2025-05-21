@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myapplicationml.R
@@ -15,7 +16,9 @@ class GalleryFragment : Fragment() {
     private var _binding: FragmentGalleryBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var image_list :List<GalleryViewModel>
+    private var isImageZoomed = false
+    private var zoomedImageViewModel: GalleryViewModel? = null
+    private lateinit var galleryAdapter: GalleryAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,24 +28,50 @@ class GalleryFragment : Fragment() {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val  images = CreerMesImages()
+        val imagesList = creerMesImages()
 
-        binding.recyclerview2.id = R.id.recyclerview2
-        binding.recyclerview2.layoutManager = GridLayoutManager(requireContext(), 1)
-        binding.recyclerview2.adapter
-        val adapter = GalleryAdapter(images)
-        binding.recyclerview2.adapter = adapter
+        galleryAdapter = GalleryAdapter(imagesList) { clickedViewModel, position ->
+            handleImageClick(clickedViewModel)
+        }
 
+        binding.recyclerview2.layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.recyclerview2.adapter = galleryAdapter
+
+        binding.imageViewZoomed.setOnClickListener {
+            if (isImageZoomed) {
+                reduceImage()
+            }
+        }
 
         return root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    // Modifiez handleImageClick pour prendre GalleryViewModel
+    private fun handleImageClick(viewModel: GalleryViewModel) {
+        if (!isImageZoomed) {
+            zoomImage(viewModel)
+        }
     }
 
-    fun CreerMesImages() :ArrayList<GalleryViewModel>
+    // Modifiez zoomImage pour prendre GalleryViewModel
+    private fun zoomImage(viewModel: GalleryViewModel) {
+        isImageZoomed = true
+        zoomedImageViewModel = viewModel
+
+        binding.imageViewZoomed.setImageResource(viewModel.image)
+        binding.cardViewZoomed.isVisible = true
+        binding.recyclerview2.isVisible = false
+    }
+
+    private fun reduceImage() {
+        isImageZoomed = false
+        zoomedImageViewModel = null
+
+        binding.cardViewZoomed.isVisible = false
+        binding.recyclerview2.isVisible = true
+    }
+
+    private fun creerMesImages() :ArrayList<GalleryViewModel>
     {
         val images = ArrayList<GalleryViewModel>()
         images.add(GalleryViewModel(R.drawable.img1))
@@ -81,6 +110,11 @@ class GalleryFragment : Fragment() {
         images.add(GalleryViewModel(R.drawable.img34))
         images.add(GalleryViewModel(R.drawable.img35))
         return images
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }

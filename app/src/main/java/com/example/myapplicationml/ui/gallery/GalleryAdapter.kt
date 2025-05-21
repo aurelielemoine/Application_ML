@@ -11,7 +11,10 @@ import com.example.myapplicationml.R
 import com.example.myapplicationml.ui.AvisAdapter
 
 
-class GalleryAdapter(val arrayGallery: ArrayList<GalleryViewModel>) : RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
+class GalleryAdapter(
+    val arrayGallery: ArrayList<GalleryViewModel>,
+    private val onItemClicked: (GalleryViewModel, Int) -> Unit // Callback : (item cliqué, position)
+) : RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
 
     // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,16 +27,13 @@ class GalleryAdapter(val arrayGallery: ArrayList<GalleryViewModel>) : RecyclerVi
     }
 
     // binds the list items to a view
-    override fun onBindViewHolder(holder: GalleryAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val currentItem = arrayGallery[position]
+        holder.image.setImageResource(currentItem.image)
 
-        val ItemsViewModel = arrayGallery[position]
-
-        // sets the image to the imageview from our itemHolder class
-        //holder.imageView.setImageResource(ItemsViewModel.image)
-
-        // sets the text to the textview from our itemHolder class
-        holder.image.setImageResource(ItemsViewModel.image)
-
+        holder.itemView.setOnClickListener {
+            onItemClicked(currentItem, position)
+        }
     }
 
     // return the number of the items in the list
